@@ -5,8 +5,8 @@ while(!feof($myfile))
     $tmp =  fgets($myfile);
     echo  $tmp ;
    echo "<br>" ;
-   print_r (explode(" ",$tmp)); 
-   $rowdata = explode(" ",$tmp); 
+   print_r (explode("\t",$tmp)); 
+   $rowdata = explode("\t",$tmp); 
    echo $rowdata[0]."<br>" ;
    echo $rowdata[1]."<br>" ;
    echo $rowdata[2]."<br>" ;
