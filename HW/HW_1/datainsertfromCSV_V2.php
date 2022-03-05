@@ -12,10 +12,10 @@ $sqlstrf ="insert into stock (datatime, storedstock, stockholder, personavg, ove
 
 // 建立MySQL的資料庫連接 
 $link = mysqli_connect("localhost","fcu",
-                       "12345678","fcu")
+                       "A123456789","fcu")
         or die("無法開啟MySQL資料庫連接!<br/>");
 echo "資料庫myschool開啟成功!<br/>";
-$myfile = fopen("./dataset/2882chip.csv", "r") or die("Unable to open file!");
+$myfile = fopen("./2882chip.csv", "r") or die("Unable to open file!");
 while(!feof($myfile)) 
 {
     $tmp =  fgets($myfile);
