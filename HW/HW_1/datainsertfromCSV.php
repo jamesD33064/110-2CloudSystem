@@ -9,7 +9,7 @@
 $sqlstr ="insert into stock (datatime, storedstock, stockholder, personavg, overfour, overfourpercent, overfourstockholder, fourfive, sixeight, eightten, overthousand, overthousandstockholderp,closingprice) VALUES ('22222222', '33', '44', '55', '66', '77', '88', '99', '10', '11', '12', '13', '14')" ;
 // 建立MySQL的資料庫連接 
 $link = mysqli_connect("localhost","fcu",
-                       "12345678","fcu")
+                       "A123456789","fcu")
         or die("無法開啟MySQL資料庫連接!<br/>");
 echo "資料庫myschool開啟成功!<br/>";
 $sql = "SELECT * FROM students"; // 指定SQL查詢字串
