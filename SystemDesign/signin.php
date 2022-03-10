@@ -60,9 +60,8 @@
         <input type="checkbox" value="remember-me"> Remember me
       </label>
     </div>
-
-    <p class="text-center text-muted mt-5 mb-0">Dont have an account? <a href="signup.php" class="fw-bold text-body"><u>signup here</u></a></p>
     
+    <p class="text-center text-muted mt-5 mb-0">Dont have an account? <a href="signup.php" class="fw-bold text-body"><u>signup here</u></a></p>
     <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
     <!-- <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p> -->
   </form>
