@@ -12,19 +12,20 @@
     $password=$_POST["password"];
 
     $sql = " SELECT * FROM `student`; ";
-    $i = 0;
 
     if($result = mysqli_query($link,$sql)){
         while($row = mysqli_fetch_assoc($result)){
             if($row["id"]==$username && $row["password"]==$password){
                 echo "登入成功".$row["id"]."-".$row["password"]."<br>";
                 $i=1;
-                break;
+                
+                echo "3秒後將自動跳轉頁面<br>";
+                echo "<a href='index.html'>未成功跳轉頁面請點擊此</a>";
+                // header("refresh:32;url=index.php");
+                exit;
             }
         }
-        if($i != 1){
-            echo "登入失敗";
-        }
+        echo "登入失敗";
         mysqli_free_result($result);
     }
     mysqli_close($link);
