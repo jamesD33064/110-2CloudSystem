@@ -24,7 +24,7 @@
   <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="index.php">
                 <img src=" " width="30" height="30" class="d-inline-block align-top" alt="">
                 <span class="h3 mx-1">系統分析與設計</span>
             </a>
@@ -37,7 +37,7 @@
               <ul class="navbar-nav mr-auto">
                   <!-- active表示當前頁面 -->
                   <li class="nav-item active">
-                      <a class="nav-link" href="index.html">首頁</a>   
+                      <a class="nav-link" href="index.php">首頁</a>   
                   </li>
                   <li class="nav-item">
                       <a class="nav-link" href="logout.php">關於我</a>

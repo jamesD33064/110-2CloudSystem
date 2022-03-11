@@ -17,9 +17,8 @@
         while($row = mysqli_fetch_assoc($result)){
             if($row["id"]==$username && $row["password"]==$password){
                 echo "登入成功".$row["id"]."-".$row["password"]."<br>";
-                echo "3秒後將自動跳轉頁面<br>";
-                echo "<a href='index.php'>未成功跳轉頁面請點擊此</a>";
                 $_SESSION['username'] = $username;
+                header("Location: http://localhost:8000/110-2CloudSystem/SystemDesign/index.php"); 
                 // header("refresh:32;url=index.html");
                 exit;
             }
