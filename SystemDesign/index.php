@@ -40,7 +40,7 @@
                       <a class="nav-link" href="index.html">首頁</a>   
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="#">關於我</a>
+                      <a class="nav-link" href="logout.php">關於我</a>
                   </li>
                   <!-- .dropdown Navbar選項使用下拉式選單 -->
                   <li class="nav-item dropdown">
@@ -62,7 +62,7 @@
                     <li><a href="signin.html"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
                   <?php } else { ?>
                    <!-- 如有 username 表示登入狀態，顯示登出選項 -->
-                    <li><a href="logout.php"><span class="glyphicon glyphicon-user"></span><?php echo $username ?></a></li>
+                    <li><a href="profile.php"><span class="glyphicon glyphicon-user"></span><?php echo $username ?></a></li>
                   <?php } ?>   
 
                   
