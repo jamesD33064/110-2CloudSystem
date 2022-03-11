@@ -15,7 +15,7 @@
   <body>
         <header>
             <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="index.php">
                     <img src=" " width="30" height="30" class="d-inline-block align-top" alt="">
                     <span class="h3 mx-1">系統分析與設計</span>
                 </a>
@@ -28,7 +28,7 @@
                   <ul class="navbar-nav mr-auto">
                       <!-- active表示當前頁面 -->
                       <li class="nav-item active">
-                          <a class="nav-link" href="#">首頁</a>   
+                          <a class="nav-link" href="index.php">首頁</a>   
                       </li>
                       <li class="nav-item">
                           <a class="nav-link" href="#">關於我</a>
@@ -224,25 +224,25 @@
         </div>
       </section>
 
-
-      <nav class="my-4" aria-label="...">
-        <ul class="pagination pagination-circle justify-content-center">
-          <li class="page-item">
-            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item active" aria-current="page">
-            <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#">Next</a>
-          </li>
-        </ul>
-      </nav>
     </div>
-  </main>
 
+    <!-- <nav class="my-4 justify-content-center" aria-label="...">
+      <ul class="pagination pagination-circle">
+        <li class="page-item">
+          <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item active" aria-current="page">
+          <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </nav> -->
+
+  </main>
 
   <footer class="bg-light text-lg-start">
 
