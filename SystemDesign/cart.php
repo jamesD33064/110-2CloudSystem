@@ -41,7 +41,7 @@
                           <a class="nav-link" href="index.php">首頁</a>   
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" href="#">關於我</a>
+                          <a class="nav-link" href="aboutme.html">關於我們組</a>
                       </li>
                       <!-- .dropdown Navbar選項使用下拉式選單 -->
                       <li class="nav-item dropdown">
