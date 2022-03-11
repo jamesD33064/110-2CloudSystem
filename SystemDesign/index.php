@@ -13,60 +13,15 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
   <body>
-      <header>
-        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-        
-            <a class="navbar-brand" href="index.html">
-                <img src=" " width="30" height="30" class="d-inline-block align-top" alt="">
-                <span class="h3 mx-1">系統分析與設計書店</span>
-            </a>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <!-- .collapse.navbar-collapse 用於外層中斷點群組和隱藏導覽列內容 -->
-            <!-- 選單項目&漢堡式折疊選單 -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                  <!-- active表示當前頁面 -->
-                  <li class="nav-item active">
-                      <a class="nav-link" href="#">首頁</a>   
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#">關於我</a>
-                  </li>
-                  <!-- .dropdown Navbar選項使用下拉式選單 -->
-                  <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">分類</a>
-                      <!-- .dropdown-menu 下拉選單內容 -->
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                          <a class="dropdown-item" href="#">紙本書</a>
-                          <a class="dropdown-item" href="#">電子書</a>
-                      </div>
-                  </li>
-              </ul>
-                
-                <!-- <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form> -->
-                
-              <ul class="nav navbar-nav navbar-right">
-                <li><a href="signin.php"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
-                <li><a href="cart.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
-              </ul>
-            </div>
-            
-        </nav>
+    <header>
+      <iframe src="nvbar.html" width="100%" height="5%"></iframe>
     </header>
-    
 
   <main class="my-5">
     <div class="container">
-
       <section class="text-center">
         <h4 class="mb-5"><strong>Latest posts</strong></h4>
+
 
         <div class="row">
           <div class="col-lg-4 col-md-12 mb-4">
