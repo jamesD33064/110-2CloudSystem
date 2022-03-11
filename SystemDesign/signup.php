@@ -1,7 +1,4 @@
 <?php
-  
-    $username="";
-    $password="";
     $dbname="fcu";
 
     $link = mysqli_connect("localhost" , $dbname , "A123456789" , $dbname) 
@@ -13,21 +10,27 @@
     $password=$_POST["password"];
 
     $sql = " SELECT * FROM `student`; ";
-    $i = 0;
 
-    if($result = mysqli_query($link,$sql)){
-        while($row = mysqli_fetch_assoc($result)){
-            if($row["id"]==$username && $row["password"]==$password){
-                echo "登入成功".$row["id"]."-".$row["password"]."<br>";
-                $i=1;
-                break;
-            }
+    $check="SELECT * FROM student WHERE id='".$username."'";
+
+    if(mysqli_num_rows(mysqli_query($link,$check))==0){
+        $sql = "INSERT INTO student (id, password)
+                VALUES('".$username."','".$password."')";
+        if(mysqli_query($link, $sql)){
+            echo "註冊成功!3秒後將自動跳轉頁面<br>";
+            echo "<a href='index.html'>未成功跳轉頁面請點擊此</a>";
+            // header("refresh:32;url=index.php");
+            exit;
         }
-        if($i != 1){
-            echo "登入失敗";
-        }
-        mysqli_free_result($result);
     }
+    else{
+        echo "該帳號已有人使用!<br>3秒後將自動跳轉頁面<br>";
+        echo "<a href='index.html'>未成功跳轉頁面請點擊此</a>";
+        // header('HTTP/1.0 302 Found');
+        //header("refresh:3;url=register.html",true);
+        exit;
+    }
+
     mysqli_close($link);
 
     
