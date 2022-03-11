@@ -1,3 +1,13 @@
+<?php
+  session_start();
+  // 確認使用者目前登入狀態
+  $username = NULL;
+  if(!empty($_SESSION['username'])) {
+    $username = $_SESSION['username'];
+  }
+?>
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -15,7 +25,7 @@
   <body>
         <header>
             <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="index.php">
                     <img src=" " width="30" height="30" class="d-inline-block align-top" alt="">
                     <span class="h3 mx-1">系統分析與設計</span>
                 </a>
@@ -28,7 +38,7 @@
                   <ul class="navbar-nav mr-auto">
                       <!-- active表示當前頁面 -->
                       <li class="nav-item active">
-                          <a class="nav-link" href="index.html">首頁</a>   
+                          <a class="nav-link" href="index.php">首頁</a>   
                       </li>
                       <li class="nav-item">
                           <a class="nav-link" href="#">關於我</a>
@@ -49,7 +59,7 @@
                       </form> -->
                   <ul class="nav navbar-nav navbar-right">
                       <li><a href="signin.html"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
-                      <li><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+                      <li><a href="cart.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
                   </ul>
                 </div>
             </nav>

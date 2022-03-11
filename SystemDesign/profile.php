@@ -40,7 +40,7 @@
                       <a class="nav-link" href="index.php">首頁</a>   
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="logout.php">關於我</a>
+                      <a class="nav-link" href="">關於我</a>
                   </li>
                   <!-- .dropdown Navbar選項使用下拉式選單 -->
                   <li class="nav-item dropdown">
@@ -66,7 +66,7 @@
                   <?php } ?>   
 
                   
-                  <li><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+                  <li><a href="cart.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
               </ul>
             </div>
         </nav>
@@ -84,7 +84,7 @@
             <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
             <div class="d-flex justify-content-center mb-2">
               <button type="button" class="btn btn-primary">Follow</button>
-              <button type="button" class="btn btn-outline-primary ms-1">Message</button>
+              <button type="button" class="btn btn-outline-primary ms-1"><a href="logout.php">Logout</a></button>
             </div>
           </div>
         </div>
