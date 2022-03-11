@@ -1,3 +1,12 @@
+<?php
+  session_start();
+  // 確認使用者目前登入狀態
+  $username = NULL;
+  if(!empty($_SESSION['username'])) {
+    $username = $_SESSION['username'];
+  }
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -48,7 +57,15 @@
                       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                   </form> -->
               <ul class="nav navbar-nav navbar-right">
-                  <li><a href="signin.html"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+                  <!-- 如無 username 表示非登入狀態，顯示註冊及登入選項 -->
+                  <?php if(!$username) { ?>
+                    <li><a href="signin.html"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+                  <?php } else { ?>
+                   <!-- 如有 username 表示登入狀態，顯示登出選項 -->
+                    <li><a href="logout.php"><span class="glyphicon glyphicon-user"></span><?php echo $username ?></a></li>
+                  <?php } ?>   
+
+                  
                   <li><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
               </ul>
             </div>
