@@ -65,7 +65,7 @@
                     <li><a href="profile.php"><span class="glyphicon glyphicon-user"></span><?php echo $username ?></a></li>
                   <?php } ?>   
 
-                  
+                   
                   <li><a href="cart.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
               </ul>
             </div>
