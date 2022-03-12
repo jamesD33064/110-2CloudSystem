@@ -18,7 +18,7 @@
             if($row["id"]==$username && $row["password"]==$password){
                 echo "登入成功".$row["id"]."-".$row["password"]."<br>";
                 $_SESSION['username'] = $username;
-                header("Location: http://localhost:8000/110-2CloudSystem/SystemDesign/index.php"); 
+                header("Location: index.php"); 
                 // header("refresh:32;url=index.html");
                 exit;
             }
