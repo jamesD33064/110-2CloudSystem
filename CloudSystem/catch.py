@@ -8,11 +8,8 @@ session = requests.Session()
 
 data = session.get(URL)
 
-# print(data.text)
-
 j = json.loads(data.text)
 # j = json.dumps(j, indent = 5 ,ensure_ascii=False)
-
 # with open(r"CloudSystem\nm.txt","w") as A:
 #     A.write(j)
 
