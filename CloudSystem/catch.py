@@ -13,8 +13,8 @@ data = session.get(URL)
 j = json.loads(data.text)
 # print(j)
 j = json.dumps(j, indent = 5 ,ensure_ascii=False)
-print(j)
-with open("../nm.txt","w") as A:
+# print(j)
+with open(r"CloudSystem\nm.txt","w") as A:
     A.write(j)
 
 # print(data.text)
