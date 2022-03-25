@@ -11,15 +11,22 @@ data = session.get(URL)
 # print(data.text)
 
 j = json.loads(data.text)
-# print(j)
-j = json.dumps(j, indent = 5 ,ensure_ascii=False)
-# print(j)
-with open(r"CloudSystem\nm.txt","w") as A:
-    A.write(j)
+# j = json.dumps(j, indent = 5 ,ensure_ascii=False)
 
-# print(data.text)
+# with open(r"CloudSystem\nm.txt","w") as A:
+#     A.write(j)
 
-
-
+for data in j['records']['location']:
+    print('\n經度 =%s' % data['lat'])
+    print('緯度 =%s' % data['lon'])
+    print('觀測站編號 =%s' % data['stationId'])
+    print('站名 =%s' % data['locationName'])
+    print('觀測時間 =%s' % data['time']['obsTime'])
+    for data2 in data['weatherElement']:
+        print('subitem name =%s' % data2['elementName'])
+        print('subitem name =%s' % data2['elementValue'])
+    for data3 in data['parameter']:
+        print('subitem name =%s' % data3['parameterName'])
+        print('subitem name =%s' % data3['parameterValue'])
 
 

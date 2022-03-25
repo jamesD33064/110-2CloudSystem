@@ -3,9 +3,9 @@
 	{
 
 		$server="localhost";		//mysql資料庫的ip or域名
-		$user="fcu";			//連線mysql帳號
-		$pass="12345678";			//連線mysql帳號密碼
-		$db="fcu";				//連線mysql主要運作的資料庫名稱
+		$user="1102CloudSystem";			//連線mysql帳號
+		$pass="123";			//連線mysql帳號密碼
+		$db="1102CloudSystem";				//連線mysql主要運作的資料庫名稱
    		//echo "cnn is ok 01"."<br>" ;	   	
 		$connection = mysqli_connect($server, $user, $pass);	//連線到資料庫
    		//echo "cnn is ok 02"."<br>" ;	   	
