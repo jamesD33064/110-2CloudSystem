@@ -27,8 +27,6 @@ def papameterstring():
 	print("===================")
 	return 0    
 	
-
-
 url='https://opendata.cwb.gov.tw/api/v1/rest/datastore/O-A0001-001?Authorization=CWB-8D336EBD-4CD8-4077-AD00-F5551E8DE2DA&format=JSON'
 try:
 	res = requests.get(url)
