@@ -60,33 +60,32 @@ j = json.loads(res.text)
 for data in j['records']['location']:
     print('item name =%s' % data['stationId'])
     print('item name =%s' % data['locationName'])
-    s01 = data['stationId']
-    s02 = data['locationName']
-    s03 = data['time']['obsTime']
-    s04 = data['lat']
-    s05 = data['lon']
+    my_data['s01'] = data['stationId']
+    my_data['s02'] = data['locationName']
+    my_data['s03'] = data['time']['obsTime']
+    my_data['s04'] = data['lat']
+    my_data['s05'] = data['lon']
     data2 = data['weatherElement']
-    s06 = data2[0]['elementValue']
-    s07 = data2[1]['elementValue']
-    s08 = data2[2]['elementValue']
-    s09 = data2[3]['elementValue']
+    my_data['s06'] = data2[0]['elementValue']
+    my_data['s07'] = data2[1]['elementValue']
+    my_data['s08'] = data2[2]['elementValue']
+    my_data['s09'] = data2[3]['elementValue']
     s10a = data2[4]['elementValue']
-    s10 = float(s10a)*10
-    s11 = data2[5]['elementValue']
-    s12 = data2[6]['elementValue']
+    my_data['s10'] = float(s10a)*10
+    my_data['s11'] = data2[5]['elementValue']
+    my_data['s12'] = data2[6]['elementValue']
     data3 = data['parameter']
-    s13 = data3[1]['parameterValue']
-    s14 = data3[0]['parameterValue']
-    s15 = data3[3]['parameterValue']
-    s16 = data3[2]['parameterValue']
-    # str1 = "http://localhost:8000"
-    # str2 = "/fcu/opendata/rainadd.php?f01=\'%s\'&f02=\'%s\'&f03=\'%s\'&f04=%s&f05=%s&f06=%s&f07=%s&f08=%s&f09=%s&f10=%s&f11=%s&f12=%s&f13=\'%s\'&f14=\'%s\'&f15=\'%s\'&f16=\'%s\'" %(s01, s02, s03, s04, s05, s06, s07, s08, s09, s10, s11, s12, s13, s14, s15, s16)
-    # str = str1+str2
-    # print(str)
+    my_data['s13'] = data3[1]['parameterValue']
+    my_data['s14'] = data3[0]['parameterValue']
+    my_data['s15'] = data3[3]['parameterValue']
+    my_data['s16'] = data3[2]['parameterValue']
+
     print("-----------------------")
 
     try:
-        session.post('http://localhost:8000/110-2CloudSystem/CloudSystem/post.php', data = my_data)
+        # print(my_data)
+        r = session.post('http://localhost:8000/110-2CloudSystem/CloudSystem/post.php', data = my_data)
+        print(r.text)
     except: # request.exceptions.RequestException as e: #requests.exceptions.RequestException as e:
         print('Exception in data_output')
 
