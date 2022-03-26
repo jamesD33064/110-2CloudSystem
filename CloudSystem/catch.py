@@ -16,6 +16,30 @@ from requests.exceptions import HTTPError
 
 URL = 'https://opendata.cwb.gov.tw/api/v1/rest/datastore/O-A0001-001?Authorization=CWB-56E2E4AF-2DE9-4D04-B9AE-5E8A18BA4943&format=JSON'
 session = requests.Session()
+
+my_data = {
+    's01' : "",
+    's02' : "",
+    's03' : "",
+    's04' : "",
+    's05' : "",
+    'data2' : "",
+    's06' : "",
+    's07' : "",
+    's08' : "",
+    's09' : "",
+    's10a' : "",
+    's10' : "",
+    's11' : "",
+    's12' : "",
+    'data3' : "",
+    's13' : "",
+    's14' : "",
+    's15' : "",
+    's16' : ""
+}
+
+
 try:
 	res = requests.get(URL)
 	res.raise_for_status()
@@ -55,22 +79,14 @@ for data in j['records']['location']:
     s14 = data3[0]['parameterValue']
     s15 = data3[3]['parameterValue']
     s16 = data3[2]['parameterValue']
-    str1 = "http://localhost:8000"
-    str2 = "/fcu/opendata/rainadd.php?f01=\'%s\'&f02=\'%s\'&f03=\'%s\'&f04=%s&f05=%s&f06=%s&f07=%s&f08=%s&f09=%s&f10=%s&f11=%s&f12=%s&f13=\'%s\'&f14=\'%s\'&f15=\'%s\'&f16=\'%s\'" %(s01, s02, s03, s04, s05, s06, s07, s08, s09, s10, s11, s12, s13, s14, s15, s16)
-    str = str1+str2
-    print(str)
+    # str1 = "http://localhost:8000"
+    # str2 = "/fcu/opendata/rainadd.php?f01=\'%s\'&f02=\'%s\'&f03=\'%s\'&f04=%s&f05=%s&f06=%s&f07=%s&f08=%s&f09=%s&f10=%s&f11=%s&f12=%s&f13=\'%s\'&f14=\'%s\'&f15=\'%s\'&f16=\'%s\'" %(s01, s02, s03, s04, s05, s06, s07, s08, s09, s10, s11, s12, s13, s14, s15, s16)
+    # str = str1+str2
+    # print(str)
     print("-----------------------")
 
     try:
-        x = requests.get(str)
-        print(x.status_code)
-        #conn.request("GET","/index.php")
-        #		conn.request("GET", str3)
-        #		r2 = conn.getresponse()
-        #		print(r2.status, r2.reason)
-        #		#r = conn.getresponse()
-        print('3Access Server  is ok')
-        #time.sleep(10)
+        session.post('http://localhost:8000/110-2CloudSystem/CloudSystem/post.php', data = my_data)
     except: # request.exceptions.RequestException as e: #requests.exceptions.RequestException as e:
         print('Exception in data_output')
 
