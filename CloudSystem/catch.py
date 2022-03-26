@@ -58,8 +58,8 @@ j = json.loads(res.text)
 #     A.write(j)
 
 for data in j['records']['location']:
-    print('item name =%s' % data['stationId'])
-    print('item name =%s' % data['locationName'])
+    # print('item name =%s' % data['stationId'])
+    # print('item name =%s' % data['locationName'])
     my_data['s01'] = data['stationId']
     my_data['s02'] = data['locationName']
     my_data['s03'] = data['time']['obsTime']
@@ -85,7 +85,7 @@ for data in j['records']['location']:
     try:
         # print(my_data)
         r = session.post('http://localhost:8000/110-2CloudSystem/CloudSystem/post.php', data = my_data)
-        print(r.text)
+        # print(r.text)
     except: # request.exceptions.RequestException as e: #requests.exceptions.RequestException as e:
         print('Exception in data_output')
 

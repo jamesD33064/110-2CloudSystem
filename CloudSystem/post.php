@@ -25,24 +25,29 @@
 
     echo $s01."_".$s02."_".$s03."_".$s04."_".$s05."_".$s06."_".$s07."_".$s08."_".$s09."_".$s10."_".$s11."_".$s12."_".$s13."_".$s14."_".$s15."_".$s16 ;
 
-
     $sql = " SELECT * FROM `weather`; ";
+    // $sql = "INSERT INTO weather (stationId, locationName ,time_obsTime ,lat,lon,elementValue_0,elementValue_1,elementValue_2,elementValue_3,elementValue_4,elementValue_5,elementValue_6,parameterValue_1,parameterValue_0,parameterValue_3,parameterValue_2)
+    // VALUES('".$s01."','".$s02."','".$s03."','".$s04."','".$s05."','".$s06."','".$s07."','".$s08."','".$s09."','".$s10."','".$s11."','".$s12."','".$s13."','".$s14."','".$s15."','".$s16."')";
+    
+    $result = "INSERT INTO `weather` (`stationId`, `locationName`, `time_obsTime`, `lat`, `lon`, `elementValue_0`, `elementValue_1`, `elementValue_2`, `elementValue_3`, `elementValue_4`, `elementValue_5`, `elementValue_6`, `parameterValue_1`, `parameterValue_0`, `parameterValue_3`, `parameterValue_2`) VALUES ('".$s01."','".$s02."','".$s03."','".$s04."','".$s05."','".$s06."','".$s07."','".$s08."','".$s09."','".$s10."','".$s11."','".$s12."','".$s13."','".$s14."','".$s15."','".$s16."')mysqli_query($link, $sql)";
 
-    $check="SELECT * FROM weather WHERE id='".$username."'";
+    // $sql = " SELECT * FROM `weather`; ";
 
-    if(mysqli_num_rows(mysqli_query($link,$check))==0){
+    // $check="SELECT * FROM weather WHERE locationName='".$s02."'";
 
-        $sql = "INSERT INTO weather (stationId, locationName ,time_obsTime ,lat,lon,elementValue_0,elementValue_1,elementValue_2,elementValue_3,elementValue_4,elementValue_5,elementValue_6,parameterValue_1,parameterValue_0,parameterValue_3,parameterValue_2)
-                VALUES('".$s01."','".$s02."','".$s03."','".$s04."','".$s05."','".$s06."','".$s07."','".$s08."','".$s09."','".$s10."','".$s11."','".$s12."','".$s13."','".$s14."','".$s15."','".$s16."')";
-        if(mysqli_query($link, $sql)){
-            echo "success"
-            // header("refresh:32;url=index.php");
-            exit;
-        }
-    }
-    else{
-        exit;
-    }
+    // if(mysqli_num_rows(mysqli_query($link,$check))==0){
+
+    //     $sql = "INSERT INTO weather (stationId, locationName ,time_obsTime ,lat,lon,elementValue_0,elementValue_1,elementValue_2,elementValue_3,elementValue_4,elementValue_5,elementValue_6,parameterValue_1,parameterValue_0,parameterValue_3,parameterValue_2)
+    //             VALUES('".$s01."','".$s02."','".$s03."','".$s04."','".$s05."','".$s06."','".$s07."','".$s08."','".$s09."','".$s10."','".$s11."','".$s12."','".$s13."','".$s14."','".$s15."','".$s16."')";
+    //     if(mysqli_query($link, $sql)){
+    //         echo "success"
+    //         // header("refresh:32;url=index.php");
+    //         // exit;
+    //     }
+    // }
+    // else{
+    //     exit;
+    // }
 
     mysqli_close($link);
 
