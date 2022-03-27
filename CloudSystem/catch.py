@@ -85,7 +85,7 @@ for data in j['records']['location']:
     try:
         # print(my_data)
         r = session.post('http://localhost:8000/110-2CloudSystem/CloudSystem/post.php', data = my_data)
-        print(r.text)
+        # print(r.text)
     except: # request.exceptions.RequestException as e: #requests.exceptions.RequestException as e:
         print('Exception in data_output')
 
