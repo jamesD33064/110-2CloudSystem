@@ -80,12 +80,12 @@ for data in j['records']['location']:
     my_data['s15'] = data3[3]['parameterValue']
     my_data['s16'] = data3[2]['parameterValue']
 
-    print("-----------------------")
+    # print("-----------------------")
 
     try:
         # print(my_data)
         r = session.post('http://localhost:8000/110-2CloudSystem/CloudSystem/post.php', data = my_data)
-        # print(r.text)
+        print(r.text)
     except: # request.exceptions.RequestException as e: #requests.exceptions.RequestException as e:
         print('Exception in data_output')
 
